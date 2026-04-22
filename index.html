@@ -34,9 +34,9 @@
 
 /* TOOL COMPARISON GRID */
 .tools-grid{display:flex;flex-direction:column;gap:20px;}
-.tool-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);position:relative;min-height:420px;}
-.tool-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;display:block;}
-.tool-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;min-height:420px;padding:28px 24px;background:linear-gradient(to bottom,rgba(0,0,0,.0) 35%,rgba(0,0,0,.72) 65%,rgba(0,0,0,.88) 100%);}
+.tool-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;min-height:360px;}
+.tool-img{width:75%;flex-shrink:0;object-fit:cover;object-position:top left;display:block;}
+.tool-body{flex:1;display:flex;flex-direction:column;padding:28px 24px;background:var(--navy);}
 .tool-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-top:auto;margin-bottom:12px;align-self:flex-start;}
 .tc-claude .tool-badge{background:rgba(167,139,250,.2);color:#c4b5fd;}
 .tc-figma .tool-badge{background:rgba(64,140,132,.25);color:#6ee7df;}
@@ -112,6 +112,9 @@
   .section,.section-dark{padding:40px 24px;}
   .shared-strip{padding:14px 18px;}
   .page-footer{padding:20px 24px;}
+  .tool-card{flex-direction:column;}
+  .tool-img{width:100%;height:260px;}
+  .tool-body{order:-1;}
 }
 </style>
 </head>
