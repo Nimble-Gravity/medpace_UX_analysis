@@ -34,22 +34,18 @@
 
 /* TOOL COMPARISON GRID */
 .tools-grid{display:flex;flex-direction:column;gap:20px;}
-.tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;flex-direction:column;position:relative;}
-.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;z-index:1;}
-.tc-claude::before{background:linear-gradient(90deg,var(--violet),#a78bfa);}
-.tc-figma::before{background:linear-gradient(90deg,var(--teal),var(--mint));}
-.tc-cursor::before{background:linear-gradient(90deg,var(--blueD),#38bdf8);}
-.tool-img{width:100%;height:240px;object-fit:cover;object-position:top left;display:block;border-bottom:1px solid var(--border);}
-.tool-body{padding:28px 24px;display:flex;flex-direction:column;flex:1;}
-.tool-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:14px;}
-.tc-claude .tool-badge{background:rgba(140,71,228,.12);color:var(--violet);}
-.tc-figma .tool-badge{background:var(--tealL);color:var(--teal);}
-.tc-cursor .tool-badge{background:var(--blueL);color:var(--blueD);}
-.tool-name{font-family:'Fraunces',serif;font-size:22px;color:var(--navy);margin-bottom:20px;line-height:1.2;}
-.tool-attrs{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
-.tool-attrs li{font-size:15px;color:var(--slate);display:flex;align-items:flex-start;gap:8px;line-height:1.4;}
-.tool-attrs li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--border);flex-shrink:0;margin-top:5px;}
-.tool-best{font-size:13px;font-weight:600;color:var(--white);padding:8px 14px;border-radius:7px;line-height:1.4;margin-top:auto;align-self:flex-start;}
+.tool-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);position:relative;min-height:420px;}
+.tool-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;display:block;}
+.tool-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;min-height:420px;padding:28px 24px;background:linear-gradient(to bottom,rgba(0,0,0,.0) 35%,rgba(0,0,0,.72) 65%,rgba(0,0,0,.88) 100%);}
+.tool-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-top:auto;margin-bottom:12px;align-self:flex-start;}
+.tc-claude .tool-badge{background:rgba(167,139,250,.2);color:#c4b5fd;}
+.tc-figma .tool-badge{background:rgba(64,140,132,.25);color:#6ee7df;}
+.tc-cursor .tool-badge{background:rgba(43,104,128,.25);color:#7dd3e8;}
+.tool-name{font-family:'Fraunces',serif;font-size:24px;color:var(--white);margin-bottom:12px;line-height:1.2;}
+.tool-attrs{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+.tool-attrs li{font-size:14px;color:rgba(255,255,255,.75);display:flex;align-items:flex-start;gap:8px;line-height:1.4;}
+.tool-attrs li::before{content:'';width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4);flex-shrink:0;margin-top:5px;}
+.tool-best{font-size:13px;font-weight:600;color:var(--white);padding:8px 14px;border-radius:7px;line-height:1.4;align-self:flex-start;}
 .tc-claude .tool-best{background:var(--violet);}
 .tc-figma .tool-best{background:var(--teal);}
 .tc-cursor .tool-best{background:var(--blueD);}
