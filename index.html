@@ -90,23 +90,26 @@ body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--navy);fo
 .step-content code{font-family:'DM Mono',monospace;font-size:12px;background:var(--tealL);color:var(--teal);padding:1px 6px;border-radius:3px;}
 
 /* WHAT IS A SKILL */
-.skill-explainer{display:flex;flex-direction:column;gap:32px;}
-.skill-col{display:flex;align-items:center;gap:12px;}
-.skill-block{flex:1;border-radius:10px;padding:20px 22px;}
-.skill-block--prompt{background:var(--navy);color:var(--white);}
-.skill-block--input{background:var(--tealL);color:var(--navy);}
-.skill-block--output{background:rgba(242,183,5,.1);border:1px solid rgba(242,183,5,.25);color:var(--navy);}
-.skill-block-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
-.skill-block--prompt .skill-block-label{color:var(--mint);}
-.skill-block--input .skill-block-label{color:var(--teal);}
-.skill-block--output .skill-block-label{color:var(--amber);}
-.skill-block-body{font-size:13px;line-height:1.6;}
-.skill-block--prompt .skill-block-body{color:var(--slatel);}
-.skill-plus,.skill-arrow{font-size:20px;font-weight:300;color:var(--slatel);flex-shrink:0;}
-.skill-rules{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.skill-rule{display:flex;gap:12px;align-items:flex-start;background:var(--off);border:1px solid var(--border);border-radius:10px;padding:18px;font-size:13px;color:var(--slate);line-height:1.55;}
-.skill-rule-icon{font-size:16px;flex-shrink:0;margin-top:2px;color:var(--teal);}
-.skill-rule strong{color:var(--navy);font-weight:700;}
+.skill-explainer{display:flex;flex-direction:column;gap:40px;}
+.skill-equation{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:0;background:var(--navy);border-radius:14px;overflow:hidden;}
+.skill-eq-block{padding:28px 28px 24px;display:flex;flex-direction:column;}
+.skill-eq-block+.skill-eq-connector{background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;padding:0 4px;}
+.skill-eq-connector span{font-size:18px;color:rgba(255,255,255,.25);font-weight:300;}
+.skill-eq-block:nth-child(1){border-right:1px solid rgba(255,255,255,.07);}
+.skill-eq-block:nth-child(3){border-left:1px solid rgba(255,255,255,.07);border-right:1px solid rgba(255,255,255,.07);}
+.skill-eq-block:nth-child(5){border-left:1px solid rgba(255,255,255,.07);}
+.skill-eq-num{font-family:'Instrument Serif',serif;font-size:48px;line-height:1;font-weight:700;margin-bottom:16px;}
+.skill-eq-block:nth-child(1) .skill-eq-num{color:var(--mint);}
+.skill-eq-block:nth-child(3) .skill-eq-num{color:var(--teal);}
+.skill-eq-block:nth-child(5) .skill-eq-num{color:var(--amber);}
+.skill-eq-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;}
+.skill-eq-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:8px;line-height:1.3;}
+.skill-eq-body{font-size:13px;color:var(--slatel);line-height:1.65;flex:1;}
+.skill-properties{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.skill-prop{background:var(--white);padding:24px;}
+.skill-prop-accent{display:block;width:32px;height:3px;border-radius:2px;margin-bottom:16px;}
+.skill-prop-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.skill-prop-body{font-size:13px;color:var(--slate);line-height:1.6;}
 
 /* VARIATIONS */
 .var-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
@@ -131,12 +134,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--navy);fo
 
 @media (max-width: 900px) {
   .var-grid{grid-template-columns:repeat(2,1fr);}
-  .skill-rules{grid-template-columns:repeat(2,1fr);}
+  .skill-properties{grid-template-columns:repeat(2,1fr);}
+  .skill-equation{grid-template-columns:1fr;grid-template-rows:auto auto auto auto auto;}
+  .skill-eq-connector{padding:4px 28px !important;justify-content:flex-start !important;}
+  .skill-eq-block:nth-child(1),.skill-eq-block:nth-child(3),.skill-eq-block:nth-child(5){border:none;border-bottom:1px solid rgba(255,255,255,.07);}
+  .skill-eq-block:nth-child(5){border-bottom:none;}
 }
 @media (max-width: 768px) {
-  .skill-col{flex-direction:column;align-items:stretch;}
-  .skill-plus,.skill-arrow{text-align:center;transform:rotate(90deg);}
-  .skill-rules{grid-template-columns:1fr;}
+  .skill-properties{grid-template-columns:1fr;}
+  .skill-equation{grid-template-columns:1fr;}
   .nav-wrapper{padding:12px 24px;gap:16px;}
   .page-header{padding:32px 24px 28px;}
   .section{padding:32px 24px;}
@@ -181,47 +187,49 @@ body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--navy);fo
   <p class="sec-sub">A skill is a saved prompt template that encodes a specific type of thinking. You write it once, reuse it across projects, and share it across your team.</p>
 
   <div class="skill-explainer">
-    <div class="skill-col">
-      <div class="skill-block skill-block--prompt">
-        <div class="skill-block-label">The Skill</div>
-        <div class="skill-block-body">A carefully structured prompt that tells Claude how to think about a specific problem — what to look for, how to format the output, and what rules to follow. Written once, by someone who knows the domain well.</div>
+    <div class="skill-equation">
+      <div class="skill-eq-block">
+        <div class="skill-eq-num">01</div>
+        <div class="skill-eq-label">The Skill</div>
+        <div class="skill-eq-title">A structured prompt</div>
+        <div class="skill-eq-body">Written once by someone who knows the domain. It tells Claude exactly what to look for, how to weigh findings, and what format to produce — every single time.</div>
       </div>
-      <div class="skill-plus">+</div>
-      <div class="skill-block skill-block--input">
-        <div class="skill-block-label">Your Input</div>
-        <div class="skill-block-body">The raw material you bring each time — a PRD, a stakeholder interview, a prototype, a user story. The skill wraps around it and tells Claude how to analyse it.</div>
+      <div class="skill-eq-connector"><span>+</span></div>
+      <div class="skill-eq-block">
+        <div class="skill-eq-num">02</div>
+        <div class="skill-eq-label">Your Input</div>
+        <div class="skill-eq-title">Any raw material</div>
+        <div class="skill-eq-body">A PRD, a stakeholder interview, a prototype, a user story. The skill wraps around it and tells Claude how to read it through the right lens.</div>
       </div>
-      <div class="skill-arrow">→</div>
-      <div class="skill-block skill-block--output">
-        <div class="skill-block-label">Structured Output</div>
-        <div class="skill-block-body">A consistent, traceable analysis in the same format every time — so the whole team knows what to expect and how to act on it.</div>
+      <div class="skill-eq-connector"><span>→</span></div>
+      <div class="skill-eq-block">
+        <div class="skill-eq-num">03</div>
+        <div class="skill-eq-label">Structured Output</div>
+        <div class="skill-eq-title">Consistent, traceable analysis</div>
+        <div class="skill-eq-body">The same six sections, every time, with findings tied to specific requirement IDs — so anyone on the team knows exactly what they're getting and how to act on it.</div>
       </div>
     </div>
 
-    <div class="skill-rules">
-      <div class="skill-rule">
-        <div class="skill-rule-icon">⟳</div>
-        <div>
-          <strong>Reusable.</strong> Run it on every PRD, not just this one. The more you use it, the more value it extracts — each analysis becomes a reference for the next.
-        </div>
+    <div class="skill-properties">
+      <div class="skill-prop">
+        <span class="skill-prop-accent" style="background:var(--mint);"></span>
+        <div class="skill-prop-title">Reusable</div>
+        <div class="skill-prop-body">Run it on every PRD. The prompt doesn't change — only the input does. Each output becomes a reference for the next project.</div>
       </div>
-      <div class="skill-rule">
-        <div class="skill-rule-icon">⇄</div>
-        <div>
-          <strong>Shareable.</strong> Save to a Claude Project and any team member gets the same analysis quality instantly. No prompt-writing required on their end.
-        </div>
+      <div class="skill-prop">
+        <span class="skill-prop-accent" style="background:var(--teal);"></span>
+        <div class="skill-prop-title">Shareable</div>
+        <div class="skill-prop-body">Save it to a Claude Project. Every team member gets the same analysis quality without writing a single prompt themselves.</div>
       </div>
-      <div class="skill-rule">
-        <div class="skill-rule-icon">◈</div>
-        <div>
-          <strong>Composable.</strong> Skills can be stacked. Run this UX analysis first, then pass the output into a prototyping prompt. The analysis becomes the brief.
-        </div>
+      <div class="skill-prop">
+        <span class="skill-prop-accent" style="background:var(--violet);"></span>
+        <div class="skill-prop-title">Composable</div>
+        <div class="skill-prop-body">Skills can be chained. The UX analysis becomes the brief for a prototyping prompt. The prototype output feeds a spec review skill.</div>
       </div>
-      <div class="skill-rule">
-        <div class="skill-rule-icon">✎</div>
-        <div>
-          <strong>Evolvable.</strong> Modify the prompt as you learn what works. Add a clinical compliance section, tune the output format, encode more of your team's specific expertise.
-        </div>
+      <div class="skill-prop">
+        <span class="skill-prop-accent" style="background:var(--amber);"></span>
+        <div class="skill-prop-title">Evolvable</div>
+        <div class="skill-prop-body">Modify the prompt as the team learns. Add a compliance section, tune the output format, encode more of your specific domain expertise over time.</div>
       </div>
     </div>
   </div>
