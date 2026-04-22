@@ -171,7 +171,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--navy);fo
 <div class="page-header">
   <div class="eyebrow">AI Design Tools Workshop · Skill Reference</div>
   <h1 class="title">PRD UX Analysis <em>Skill</em></h1>
-  <p class="subtitle">A reusable prompt template that encodes senior UX thinking. Paste any PRD into Claude with this skill and get a structured analysis of gaps, ambiguities, and design questions in [...]
+  <p class="subtitle">A reusable prompt template that encodes senior UX thinking. Paste any PRD into Claude with this skill and get a structured analysis of gaps, ambiguities, and design questions in under 60 seconds.</p>
   <div class="header-chips">
     <div class="chip"><div class="chip-dot" style="background:var(--mint);"></div>Works in Claude.ai chat</div>
     <div class="chip"><div class="chip-dot" style="background:var(--violet);"></div>Works in Claude Design</div>
@@ -278,7 +278,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--navy);fo
 <div class="section">
   <div class="sec-label">The Skill</div>
   <h2 class="sec-title">Copy this prompt</h2>
-  <p class="sec-sub">Paste this into Claude.ai (or any Claude interface) before your PRD text. The <span style="color:var(--amber);font-weight:600;">[paste your PRD here]</span> placeholder is where y[...]
+  <p class="sec-sub">Paste this into Claude.ai (or any Claude interface) before your PRD text. The <span style="color:var(--amber);font-weight:600;">[paste your PRD here]</span> placeholder is where your PRD goes — everything above it is the skill.</p>
 
   <div class="prompt-wrap">
     <div class="prompt-topbar">
@@ -358,28 +358,28 @@ PRD:
       <div class="step-num">1</div>
       <div class="step-content">
         <h4>Claude.ai — simplest, works for everyone</h4>
-        <p>Open claude.ai. Start a new conversation. Copy the prompt above → paste it → then paste your PRD below it → hit Enter. Claude will produce the full six-section analysis. Use this when[...]
+        <p>Open claude.ai. Start a new conversation. Copy the prompt above → paste it → then paste your PRD below it → hit Enter. Claude will produce the full six-section analysis. Use this when you just need the analysis as a document to read and act on.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-content">
         <h4>Claude Projects — for team reuse and shared context</h4>
-        <p>Save the skill prompt to a Claude Project alongside your design system docs, brand guidelines, and previous analyses. Now every team member who opens that Project gets Claude pre-loaded wit[...]
+        <p>Save the skill prompt to a Claude Project alongside your design system docs, brand guidelines, and previous analyses. Now every team member who opens that Project gets Claude pre-loaded with your full design context. Ask: <code>"Run the UX Analysis skill on the enrollment PRD"</code> and it already knows your system.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-content">
         <h4>Cursor + Claude Code — when you want to act on the analysis immediately</h4>
-        <p>Open the PRD file in Cursor. Type <code>@PRD_Patient_Enrollment_Table.docx</code> to attach it. Paste the skill prompt into the chat. The analysis will appear inline. Then immediately follo[...]
+        <p>Open the PRD file in Cursor. Type <code>@PRD_Patient_Enrollment_Table.docx</code> to attach it. Paste the skill prompt into the chat. The analysis will appear inline. Then immediately follow up: <code>"Now generate a prototype that addresses the top 3 UX gaps you just identified."</code> This turns analysis into design in one continuous session.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">4</div>
       <div class="step-content">
         <h4>Claude Design — when analysis drives the prototype</h4>
-        <p>Paste the skill prompt into Claude Design followed by the PRD. After the analysis appears, follow up: <code>"Based on the UX gaps you identified, design the patient enrollment table with th[...]
+        <p>Paste the skill prompt into Claude Design followed by the PRD. After the analysis appears, follow up: <code>"Based on the UX gaps you identified, design the patient enrollment table with those gaps resolved."</code> The analysis and the prototype happen in the same canvas — no copy-pasting between tools.</p>
       </div>
     </div>
   </div>
@@ -396,25 +396,25 @@ PRD:
       <div class="var-tag" style="background:var(--tealL);color:var(--teal);">User Research</div>
       <div class="var-title">Interview synthesis → requirements</div>
       <div class="var-body">Replace the PRD with a stakeholder interview transcript. Prepend this modifier before the skill prompt:</div>
-      <div class="var-prompt">The following is a stakeholder interview transcript, not a PRD. Extract implied requirements, then run the UX Analysis on what you extracted. Flag where requirements are [...]
+      <div class="var-prompt">The following is a stakeholder interview transcript, not a PRD. Extract implied requirements, then run the UX Analysis on what you extracted. Flag where requirements are inferred vs. explicitly stated.</div>
     </div>
     <div class="var-card">
       <div class="var-tag" style="background:var(--violetL);color:var(--violet);">Design Review</div>
       <div class="var-title">Prototype analysis → evolved spec</div>
       <div class="var-body">Feed a working prototype HTML file to Cursor and prepend this modifier:</div>
-      <div class="var-prompt">The following is a working prototype HTML file, not a PRD. Analyse it as a UX artefact: what design decisions were made, which should be locked in, which should be revisi[...]
+      <div class="var-prompt">The following is a working prototype HTML file, not a PRD. Analyse it as a UX artefact: what design decisions were made, which should be locked in, which should be revisited, and what requirements appear to be missing from the original spec.</div>
     </div>
     <div class="var-card">
       <div class="var-tag" style="background:var(--blueL);color:var(--blueD);">Clinical / Regulated</div>
       <div class="var-title">Add 21 CFR Part 11 compliance lens</div>
       <div class="var-body">For clinical monitoring features, add a seventh section after Section 6:</div>
-      <div class="var-prompt">7. REGULATORY DESIGN IMPLICATIONS: For each requirement, identify design decisions driven by 21 CFR Part 11, ICH E6 GCP, or HIPAA compliance. Flag where compliance requir[...]
+      <div class="var-prompt">7. REGULATORY DESIGN IMPLICATIONS: For each requirement, identify design decisions driven by 21 CFR Part 11, ICH E6 GCP, or HIPAA compliance. Flag where compliance requirements create UX constraints, and where those constraints conflict with usability best practices.</div>
     </div>
     <div class="var-card">
       <div class="var-tag" style="background:var(--okBg);color:var(--okG);">Feasibility</div>
       <div class="var-title">Early feasibility study screen analysis</div>
       <div class="var-body">For Brittany's feasibility study work, replace Section 6 with this:</div>
-      <div class="var-prompt">6. PARTICIPANT BURDEN ASSESSMENT: For each data collection requirement, assess the cognitive and time burden on study participants. Flag where requirements create frictio[...]
+      <div class="var-prompt">6. PARTICIPANT BURDEN ASSESSMENT: For each data collection requirement, assess the cognitive and time burden on study participants. Flag where requirements create friction that could affect data quality, completion rates, or participant dropout.</div>
     </div>
   </div>
 </div>
