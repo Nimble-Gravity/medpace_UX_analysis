@@ -40,8 +40,8 @@
     </div>
     <div class="insight-card">
       <div class="insight-card-num">03</div>
-      <h3>In clinical software, ambiguity is expensive.</h3>
-      <p>A vague requirement interpreted loosely by an AI coding assistant could mean a workflow that doesn't match clinical reality, a compliance gap, or a patient safety issue. Medpace's products run in regulated environments. The cost of misinterpretation isn't a UX bug — it can cascade into a 21 CFR Part 11 deviation or a patient data integrity issue that surfaces during audit.</p>
+      <h3>In financial software, ambiguity is expensive.</h3>
+      <p>A vague requirement interpreted loosely by an AI coding assistant could mean a workflow that doesn't match financial reality, a compliance gap, or a data integrity issue. Acme Corp's products run in regulated environments. The cost of misinterpretation isn't a UX bug — it can cascade into a SOC 2 Type II deviation or a customer data integrity issue that surfaces during audit.</p>
     </div>
     <div class="insight-card">
       <div class="insight-card-num">04</div>
@@ -51,9 +51,9 @@
   </div>
 </div>
 
-<!-- SECTION 3: Where Medpace Is Today -->
+<!-- SECTION 3: Where Acme Corp Is Today -->
 <div class="section" id="today" style="background:var(--white);">
-  <div class="sec-eyebrow violet">02 — Where Medpace is today</div>
+  <div class="sec-eyebrow violet">02 — Where Acme Corp is today</div>
   <h2 class="sec-title">An honest look at current practice</h2>
   <p class="sec-sub">This is not a critique — it's a baseline. Understanding where the friction actually lives is the only way to know where AI can genuinely help versus where it would just add noise.</p>
 
@@ -62,7 +62,7 @@
       <div class="assessment-num">1</div>
       <div class="assessment-content">
         <h3>Stakeholder constraints are real.</h3>
-        <p>Requirements start as conversations, emails, or voicemails from stakeholders who may have only 30 minutes per week — busy clinicians, study coordinators, and medical monitors who are domain experts but not specification writers. You cannot expect a clinical operations lead to produce a well-formed user story. That translation work is yours, and AI can help you do it faster.</p>
+        <p>Requirements start as conversations, emails, or voicemails from stakeholders who may have only 30 minutes per week — busy Loan Officers, Credit Analysts, and Risk Managers who are domain experts but not specification writers. You cannot expect a risk operations lead to produce a well-formed user story. That translation work is yours, and AI can help you do it faster.</p>
       </div>
     </div>
     <div class="assessment-item">
@@ -77,6 +77,7 @@
       <div class="assessment-content">
         <h3>Late migration to Helix.</h3>
         <p>Requirements don't enter Helix ALM until near the end of development — by that point, the code is written and the requirement is just documentation of what was built. This inverts the value of a requirements tool. If AI-generated documentation and prototypes can create a feedback loop earlier, requirements can serve their actual purpose: aligning interpretation before work begins, not recording history after it ends.</p>
+
       </div>
     </div>
     <div class="assessment-item">
@@ -153,39 +154,39 @@
   <div class="compare-grid">
     <div class="compare-card bad">
       <div class="compare-label">Vague Requirement</div>
-      <h3>"Allow users to manage patient enrollment."</h3>
-      <p>The developer interprets it one way, the designer another, QA writes tests against a third interpretation, and you spend your sprint in clarification meetings. Figma Make produces a generic form. Copilot guesses at data types and invents field names. Test cases don't map to real clinical scenarios. Rework begins the moment you demo to a stakeholder.</p>
+      <h3>"Allow users to manage loan applications."</h3>
+      <p>The developer interprets it one way, the designer another, QA writes tests against a third interpretation, and you spend your sprint in clarification meetings. Figma Make produces a generic form. Copilot guesses at data types and invents field names. Test cases don't map to real financial scenarios. Rework begins the moment you demo to a stakeholder.</p>
     </div>
     <div class="compare-card good">
       <div class="compare-label">Well-Structured Requirement</div>
-      <h3>"CRA views enrollment status for all 6 sites at a glance, sortable by % to target."</h3>
-      <p>One requirement, structured once — AI-generated UI mockups with the right columns, scaffolded Angular table component with correct data types, generated test cases covering the happy path and the "site at risk" edge case, and populated backlog items. The Figma Make output is reviewable by a clinician the same day it's written. Minimal rework because there's nothing to reinterpret.</p>
+      <h3>"Loan Officer views application status for all 6 branches at a glance, sortable by % to approval target."</h3>
+      <p>One requirement, structured once — AI-generated UI mockups with the right columns, scaffolded Angular table component with correct data types, generated test cases covering the happy path and the "branch at risk" edge case, and populated backlog items. The Figma Make output is reviewable by a Loan Officer the same day it's written. Minimal rework because there's nothing to reinterpret.</p>
     </div>
   </div>
 
   <div class="roi-callout">
     <div class="roi-callout-icon">⏱</div>
-    <p><strong>The ROI is simple:</strong> An extra 15 minutes structuring a requirement up front saves hours of rework when AI tools are in the pipeline. At Medpace's cadence, with validation cycles and 21 CFR Part 11 change control overhead, a single misinterpreted requirement that reaches the validation phase can cost days — not hours.</p>
+    <p><strong>The ROI is simple:</strong> An extra 15 minutes structuring a requirement up front saves hours of rework when AI tools are in the pipeline. At Acme Corp's cadence, with validation cycles and SOC 2 Type II change control overhead, a single misinterpreted requirement that reaches the validation phase can cost days — not hours.</p>
   </div>
 </div>
 
-<!-- SECTION 5: Applied to ONCO-2024-003 -->
+<!-- SECTION 5: Applied to LOAN-2024-Q3 -->
 <div class="section" id="example" style="background:var(--off);">
-  <div class="sec-eyebrow violet">04 — Applied to ONCO-2024-003</div>
+  <div class="sec-eyebrow violet">04 — Applied to LOAN-2024-Q3</div>
   <h2 class="sec-title">The same feature. Two very different requirements.</h2>
-  <p class="sec-sub">The Patient Enrollment Table for trial ONCO-2024-003 is the running example throughout this playbook. Here's what the gap between a vague requirement and an AI-ready one looks like in practice — using a real feature, real roles, and real data.</p>
+  <p class="sec-sub">The Loan Application Review Table for portfolio LOAN-2024-Q3 is the running example throughout this playbook. Here's what the gap between a vague requirement and an AI-ready one looks like in practice — using a real feature, real roles, and real data.</p>
 
   <div class="before-after">
     <div class="ba-card before">
       <div class="ba-header">Before — Vague</div>
       <div class="ba-body">
-        <div class="ba-quote">"The system should allow users to manage patient enrollment for clinical trials."</div>
+        <div class="ba-quote">"The system should allow users to manage loan applications."</div>
         <ul class="ba-issues">
-          <li>No specific role context — "users" could mean CRA, Site Coordinator, Sponsor Monitor, or Data Manager. Each needs different data and different permissions.</li>
-          <li>No data specifics — Figma Make produces a generic table. Copilot invents field names that don't match the clinical data model.</li>
+          <li>No specific role context — "users" could mean Loan Officer, Credit Analyst, Risk Manager, or Compliance Officer. Each needs different data and different permissions.</li>
+          <li>No data specifics — Figma Make produces a generic table. Copilot invents field names that don't match the financial data model.</li>
           <li>No validation rules — what constitutes "on track" vs. "at risk"? What triggers a status change? These decisions get made silently in code.</li>
           <li>No UI guidance — sortable? Filterable? Exportable? Inline editing or read-only? Each decision is deferred to the developer at implementation time.</li>
-          <li>No compliance angle — does enrollment status require an audit trail? Can it be edited after lock? 21 CFR Part 11 implications go unaddressed.</li>
+          <li>No compliance angle — does application status require an audit trail? Can it be edited after lock? SOC 2 Type II and PCI-DSS implications go unaddressed.</li>
         </ul>
       </div>
     </div>
@@ -194,11 +195,11 @@
       <div class="ba-body">
         <div class="ba-field">
           <div class="ba-field-label">Story</div>
-          <div class="ba-field-value">As a CRA monitoring trial ONCO-2024-003, I need to view the enrollment status of all 6 sites at a glance so I can identify sites at risk of falling behind target before the weekly sponsor call.</div>
+          <div class="ba-field-value">As a Loan Officer managing portfolio LOAN-2024-Q3, I need to view the application status of all 6 branches at a glance so I can identify branches at risk of falling behind target before the weekly portfolio review call.</div>
         </div>
         <div class="ba-field">
           <div class="ba-field-label">Data Fields</div>
-          <div class="ba-field-value"><code>Site ID</code> · <code>Site Name</code> · <code>Target Enrollment</code> · <code>Actual Enrollment</code> · <code>% to Target</code> · <code>Last Updated</code> · <code>Status</code></div>
+          <div class="ba-field-value"><code>Branch ID</code> · <code>Branch Name</code> · <code>Target Approvals</code> · <code>Actual Approvals</code> · <code>% to Target</code> · <code>Last Updated</code> · <code>Status</code></div>
         </div>
         <div class="ba-field">
           <div class="ba-field-label">Status Values</div>
@@ -209,10 +210,10 @@
           <div class="ba-field-value">Sortable table, all columns. Inline filter by status. Export to CSV. Color-blind-safe status indicators: icon + label, never color alone (WCAG 2.1 AA).</div>
         </div>
         <ul class="ba-issues" style="margin-top:12px;">
-          <li>Figma Make produces a table with the exact six site rows and correct column headers on first pass.</li>
+          <li>Figma Make produces a table with the exact six branch rows and correct column headers on first pass.</li>
           <li>Copilot scaffolds an Angular Material table component with correct TypeScript types and no invented fields.</li>
           <li>Generated test cases map to defined thresholds — "At Risk" logic is testable because the threshold is explicit.</li>
-          <li>21 CFR Part 11 audit trail requirement is flagged at writing time, not discovered during validation.</li>
+          <li>SOC 2 Type II audit trail requirement is flagged at writing time, not discovered during validation.</li>
         </ul>
       </div>
     </div>
@@ -246,7 +247,7 @@ as user stories using this template:</span>
 <span class="amber">Acceptance:</span>  Given / When / Then — testable, covering happy path and edge cases.
 <span class="amber">Data:</span>        Inputs, outputs, data types, validation rules, data sources.
 <span class="amber">UI/UX:</span>       Layout, key interactions, states (loading, empty, success, error).
-<span class="amber">Compliance:</span>  HIPAA / 21 CFR Part 11 considerations, audit trail needs.
+<span class="amber">Compliance:</span>  SOC 2 Type II / PCI-DSS considerations, audit trail needs.
 <span class="amber">Edge Cases:</span>  Boundary conditions, error states, network failures.
 
 <span class="violet">Flag any ambiguities and list follow-up questions.</span>
@@ -274,7 +275,7 @@ as user stories using this template:</span>
     <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:rgba(140,71,228,.15);border:1px solid rgba(140,71,228,.3);display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;">→</div>
     <div>
       <div style="font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--violet);margin-bottom:6px;">Coming up in Phase 02</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;">Phase 02 covers stakeholder intake — how to structure the conversation before the meeting so you come out with enough to write a good requirement, not just a to-do list. Phase 03 walks through the full AI-ready requirement template and how to tune it for Medpace's specific toolchain and compliance environment.</p>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;">Phase 02 covers stakeholder intake — how to structure the conversation before the meeting so you come out with enough to write a good requirement, not just a to-do list. Phase 03 walks through the full AI-ready requirement template and how to tune it for Acme Corp's specific toolchain and compliance environment.</p>
     </div>
   </div>
 </div>
@@ -306,7 +307,7 @@ as user stories using this template:</span>
       <path class="ng-wordmark-bottom" d="M73.1549 57.0147C73.1549 58.5629 74.3377 59.8582 76.0547 59.8582C77.7717 59.8582 78.9926 58.5629 78.9926 57.0147C78.9926 55.4665 77.8098 54.1713 76.0547 54.1713C74.2996 54.1713 73.1549 55.501 73.1549 57.0147ZM12.5721 52.5886C14.3273 52.5886 15.4032 53.1634 15.4032 54.7461C15.4032 57.4439 12.2516 58.6319 8.74135 58.6319C5.23107 58.6319 3.26227 57.122 3.26227 54.7116C3.26227 53.8494 3.47594 53.1289 3.94143 52.5886H12.5759H12.5721ZM5.94457 38.5936C5.94457 35.7884 6.76873 33.8072 8.77569 33.8072C10.7826 33.8072 11.8205 36.2904 11.8205 39.1684C11.8205 42.0463 11.0345 44.0276 9.06185 44.0276C6.94806 44.0276 5.94457 41.5443 5.94457 38.5936ZM4.01011 46.7982C4.01011 46.0433 4.5481 45.2883 5.22726 44.6407C6.33757 45.0354 7.59288 45.2155 8.84437 45.2155C13.3238 45.2155 16.5097 42.8779 16.5097 39.0649C16.5097 37.2638 15.5063 35.7539 14.251 34.9262L16.7577 35.0335H18.2267V32.945L12.1715 33.0906C11.2749 32.8377 10.3095 32.5848 8.98173 32.5848C4.50231 32.5848 1.17136 35.0335 1.17136 39.1684C1.17136 41.7244 2.56784 43.3799 4.46797 44.315C2.81967 45.3573 1.13702 46.7254 1.13702 48.8484C1.13702 50.3238 1.96118 51.5846 3.35765 52.1211C1.6483 52.6614 0 53.6693 0 55.501C0 58.4135 3.25845 60 8.48952 60C14.4379 60 18.9517 57.4822 18.9517 52.9488C18.9517 49.7834 16.8035 48.0207 12.6484 48.0207H5.26541C4.4756 48.0207 4.01011 47.5531 4.01011 46.7982ZM32.6341 37.0837H33.3133V33.1979C33.0271 32.8377 32.4891 32.5848 31.7375 32.5848C29.6237 32.5848 28.5477 33.9873 26.8307 37.9114L26.9757 32.5848H26.1516L19.7377 34.5621V35.2443L21.8858 36.505V52.0138H29.8755V50.8258C27.6549 50.6457 26.8307 50.4311 26.8307 48.9557V39.0266C28.6583 37.191 30.4135 37.0837 32.6341 37.0837ZM44.7407 48.3464C43.7373 49.1013 43.0199 49.496 41.9821 49.496C40.082 49.496 39.2235 48.1663 39.2235 46.2924C39.2235 44.2766 40.1545 43.4489 41.6578 42.8741L44.7407 41.6133V48.3426V48.3464ZM52.2993 49.6761C51.9063 49.8563 51.4026 50.0364 50.8647 50.0364C49.9337 50.0364 49.6818 49.2431 49.6818 48.0207V38.4863C49.6818 34.2747 47.175 32.5848 42.5888 32.5848C38.613 32.5848 35.5301 34.1329 35.5301 37.1182C35.5301 38.3062 36.1406 39.0611 37.1059 39.383L40.0782 38.9883C39.8989 38.195 39.792 37.4784 39.792 36.758C39.792 35.0297 40.4712 33.7344 42.192 33.7344C44.054 33.7344 44.7369 35.2098 44.7369 37.26V40.318L39.3265 42.2954C36.6404 43.3033 34.4198 44.5641 34.4198 47.6566C34.4198 50.5345 36.3542 52.2973 39.2579 52.2973C41.8371 52.2973 43.6991 50.7147 44.8476 49.2048C45.2062 51.1822 46.4959 52.3702 48.4304 52.3702C50.113 52.3702 51.4751 51.688 52.513 50.4617L52.2993 49.6685V49.6761ZM69.2669 35.2864L70.2589 32.945H64.8027V34.1329C66.6647 34.3859 67.237 34.5277 67.237 35.3554C67.237 35.6428 67.1645 35.8574 66.9852 36.3249L62.9713 46.3268L62.4409 45.0967L57.1984 32.9411H51.1127V34.1291C52.4023 34.4893 52.5816 34.7423 52.9403 35.4972L60.7507 52.2629H62.0746L69.1677 35.4972C69.202 35.4205 69.2325 35.3516 69.2631 35.2864M73.6509 52.0138H80.8508V50.8258C79.1682 50.7185 78.5958 50.5039 78.5958 49.2431V32.5848H77.806L71.499 34.5621V35.2443L73.6471 36.505V52.0138H73.6509ZM94.682 49.2776L94.2509 48.63C93.3542 49.3121 92.5682 49.6378 91.5648 49.6378C89.8821 49.6378 89.058 48.7028 89.058 46.507V34.5966H93.7167V32.9411H89.058V28.2621H87.982C86.4405 30.638 84.3267 32.6537 81.8581 33.7689V34.5966H84.0787V46.7944C84.0787 50.8258 86.2269 52.3702 89.1648 52.3702C91.7441 52.3702 93.5336 51.0749 94.682 49.2776ZM111.081 35.3516C111.081 35.639 111.009 35.9264 110.829 36.3594L106.815 47.009L102.515 36.3594C102.508 36.3364 102.504 36.3173 102.496 36.2981L101.142 32.9411H94.9949V34.1291C96.2846 34.4893 96.4982 34.7423 96.8225 35.4972L104.526 52.6959L103.916 54.2441C103.164 56.2215 101.981 56.7618 100.047 56.7618C99.0088 56.7618 98.364 56.6162 97.6085 56.4361V58.2717C97.9672 59.314 99.15 59.9272 100.367 59.9272C102.695 59.9272 103.916 58.3445 105.095 55.4282L112.977 35.4934C112.977 35.4934 112.985 35.478 112.989 35.4704L113.989 32.9411H108.643V34.1291C110.505 34.3437 111.081 34.5238 111.081 35.3516Z" />
     </svg>
   </a>
-  <div class="footer-note">AI-Powered SDLC Playbook · Medpace</div>
+  <div class="footer-note">AI-Powered SDLC Playbook · Acme Corp</div>
 </div>
 
 <script>

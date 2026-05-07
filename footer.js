@@ -45,7 +45,7 @@
     footer.removeAttribute('style');
     footer.innerHTML =
       '<div class="nav-footer-copy">' +
-        '<div class="nav-footer-kicker">Nimble Gravity × Medpace</div>' +
+        '<div class="nav-footer-kicker">Nimble Gravity × Acme Corp</div>' +
         '<div class="nav-footer-title">AI-Powered SDLC Playbook</div>' +
         '<div class="nav-footer-text">A shared project reference for requirements, design, dev handoff, development, and QA workflows, built to show how Nimble Gravity approaches the software delivery lifecycle with AI-native methods and clearer handoffs.</div>' +
         '<div class="nav-footer-stages" aria-label="Project stages">' +
