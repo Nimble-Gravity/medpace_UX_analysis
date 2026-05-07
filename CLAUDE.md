@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A static HTML documentation/workshop site for a UX design team at Medpace — a clinical trial / life sciences software company. The site covers an initiative introducing three AI tools (Claude Design, Figma Make, Cursor + Claude Code) into the team's design practice. No build step, no framework, no package manager.
+A static HTML documentation/workshop site for a UX design team at Acme Corp — a financial services software company. The site covers an initiative introducing three AI tools (Claude Design, Figma Make, Cursor + Claude Code) into the team's design practice. No build step, no framework, no package manager.
 
 To run locally:
 ```bash
@@ -31,7 +31,7 @@ initiative-context.md — Domain and project context (read this before writing c
 
 **Every page** follows this structure: `<link>` to shared.css → `<style>` block for page-specific CSS → `<script src="nav.js">` as first element of `<body>` → one primary intro pattern (`hero` or `page-header`) → section divs → page-footer div → optional inline `<script>`.
 
-**nav.js** detects whether the page is in `/pages/` and adjusts root-relative links accordingly. It loads the page list by first trying a local directory listing, then falling back to the GitHub API at `github.com/Nimble-Gravity/medpace-AI-powered-SDLC`.
+**nav.js** detects whether the page is in `/pages/` and adjusts root-relative links accordingly. It loads the page list by first trying a local directory listing, then falling back to the GitHub API at `github.com/Nimble-Gravity/acme-corp-SDLC`.
 
 **shared.css** provides the shared visual system: Google Fonts imports, CSS custom properties, base resets, and a growing set of cross-page components/layout patterns used by multiple pages. Before creating a new reusable page pattern, check `DESIGN-SYSTEM.md`.
 
@@ -49,15 +49,15 @@ When adding badges, chips, tags, or small craft labels, reuse the shared badge l
 
 ## Domain Context
 
-The target audience is enterprise UX designers and frontend developers building **clinical trial monitoring software**. Content tone is practitioner-to-practitioner — not marketing copy. Key constraints of the team's actual product:
+The target audience is enterprise UX designers and frontend developers building **financial services software** (loan origination platform). Content tone is practitioner-to-practitioner — not marketing copy. Key constraints of the team's actual product:
 
 - Component library: **forked Angular Material UI** (not Tailwind, not React)
-- Compliance: **21 CFR Part 11**, WCAG 2.1 AA
+- Compliance: **SOC 2 Type II**, **PCI-DSS Level 1**, WCAG 2.1 AA
 - Color-blind-safe patterns required (icon + label, never color alone for status)
 - Reference products for design language: Salesforce, Jira — high data density, not consumer aesthetic
 
-When generating prompt examples or tutorial content, use the canonical reference feature: **Patient Enrollment Table for trial ONCO-2024-003** (see `initiative-context.md` §11 for full data).
+When generating prompt examples or tutorial content, use the canonical reference feature: **Loan Application Review Table for portfolio LOAN-2024-Q3** (see `initiative-context.md` §11 for full data).
 
-The three tools covered have distinct roles: Claude Design owns exploration/stakeholder prototypes, Figma Make owns screens that need to live on the Figma canvas, Cursor + Claude Code owns prototypes that terminate in Angular Material output Kelly can work with directly.
+The three tools covered have distinct roles: Claude Design owns exploration/stakeholder prototypes, Figma Make owns screens that need to live on the Figma canvas, Cursor + Claude Code owns prototypes that terminate in Angular Material output Jordan can work with directly.
 
 Do not present Storybook as a settled part of the team's workflow — it is under review due to Angular support limitations (see `initiative-context.md` §10).

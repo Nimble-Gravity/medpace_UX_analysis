@@ -5,29 +5,29 @@
 
 ## 1. Who This Is For
 
-This context file supports a **UX design team at Medpace.com a company operating in clinical trial / life sciences software**. The primary audience for the website includes:
+This context file supports a **UX design team at Acme Corp, a company operating in financial services software**. The primary audience for the website includes:
 
 - UX designers
 - Frontend developers 
-- Clinical domain experts
+- Financial domain experts
 - Designers working across discovery, prototyping, and handoff
-- Product and clinical operations stakeholders
+- Product and risk operations stakeholders
 
-The team builds **internal enterprise tools** — not consumer products. Their flagship domain is **clinical trial monitoring software**, specifically platforms used by Clinical Research Associates (CRAs) and Site Coordinators managing patient enrollment across multiple hospital sites.
+The team builds **internal enterprise tools** — not consumer products. Their flagship domain is **loan origination platform software**, specifically platforms used by Loan Officers and Credit Analysts managing loan applications across multiple branch offices.
 
 ---
 
 ## 2. The Company and Its Domain
 
 ### Industry
-Clinical research / life sciences software. The company builds platforms used in **Phase III oncology trials** and similar regulated environments. Their products must comply with **21 CFR Part 11** (electronic records in FDA-regulated trials), meaning audit logging, access control, and data integrity are non-negotiable.
+Financial services software. The company builds platforms used in **commercial lending / loan portfolio management** and similar regulated environments. Their products must comply with **SOC 2 Type II** and **PCI-DSS Level 1**, meaning audit logging, access control, and data integrity are non-negotiable.
 
-### Representative Product: Clinical Trial Monitoring Platform
-The team's current major feature is a **Patient Enrollment Management Table** for trial `ONCO-2024-003`. This is a useful reference case for any content on the website — it illustrates the real constraints the team works under:
+### Representative Product: Loan Origination Platform
+The team's current major feature is a **Loan Application Review Table** for portfolio `LOAN-2024-Q3`. This is a useful reference case for any content on the website — it illustrates the real constraints the team works under:
 
-- De-identified patient data (no PHI in table views)
-- Role-based access: CRA, Site Coordinator, Clinical Ops Manager, Medical Monitor (read-only)
-- Integration with EDC systems (Medidata Rave), visit management systems, SSO/identity providers
+- Anonymized customer data (no PII in table views)
+- Role-based access: Loan Officer, Credit Analyst, Risk Manager, Compliance Officer (read-only)
+- Integration with CRM (Salesforce), document management systems, SSO/identity providers
 - WCAG 2.1 AA accessibility compliance required
 - Color-blind-safe palettes (deuteranopia/protanopia) — icons and labels, not color alone
 - Performance: 200-row table must load in <2 seconds; filters respond in <300ms
@@ -35,7 +35,7 @@ The team's current major feature is a **Patient Enrollment Management Table** fo
 - Desktop-only for v1.0 (1024px–1920px viewport range)
 
 ### Design Language
-The team's visual style is **enterprise clinical**: white backgrounds, teal and navy accents, high data density. Reference products: Salesforce, Jira, Salesforce Health Cloud. Explicitly *not* consumer-app aesthetic — no decorative gradients, no rounded hero sections, no marketing softness.
+The team's visual style is **enterprise financial**: white backgrounds, teal and navy accents, high data density. Reference products: Salesforce, Jira, Salesforce Financial Services Cloud. Explicitly *not* consumer-app aesthetic — no decorative gradients, no rounded hero sections, no marketing softness.
 
 ---
 
@@ -61,7 +61,7 @@ This is the core issue the initiative addresses. The team's current software dev
 
 ### 3.4 Tool Fragmentation
 - Figma for visual design
-- A separate system (Excel or EDC) for data tracking
+- A separate system (Excel or CRM) for data tracking
 - Cursor/VS Code for prototype-to-code work
 - Claude.ai for ad hoc synthesis tasks
 - No unified workflow connecting these tools
@@ -76,7 +76,7 @@ This is the core issue the initiative addresses. The team's current software dev
 ## 4. The Initiative: AI Tools for the Design Practice
 
 ### What It Is
-A structured **workshop and workflow change initiative** introducing three AI tools into the team's design process. Launched April 2026. The workshop runs for 2 hours and demonstrates each tool on the same feature (Patient Enrollment Table) so the team can compare outputs directly.
+A structured **workshop and workflow change initiative** introducing three AI tools into the team's design process. Launched April 2026. The workshop runs for 2 hours and demonstrates each tool on the same feature (Loan Application Review Table) so the team can compare outputs directly.
 
 ### The Three Tools
 
@@ -99,7 +99,7 @@ A structured **workshop and workflow change initiative** introducing three AI to
 
 1. **Exploration to Stakeholder** — Claude Design for rapid multi-direction prototyping; share URL; refine in conversation
 2. **Design-Native Screens** — Figma Make for data-heavy screens that need to live in Figma for team annotation
-3. **Code-Native Prototype** — Cursor + Claude Code for prototypes that hand directly to Kelly as working Tailwind/React code
+3. **Code-Native Prototype** — Cursor + Claude Code for prototypes that hand directly to Jordan as working Tailwind/React code
 4. **Prototype → Evolved Spec** — Feed the working prototype back into Claude Code; extract all design decisions; generate structured documentation automatically
 
 ### The "Prototype → Evolved Spec" Workflow (Most Novel)
@@ -115,10 +115,10 @@ This is the workflow with the highest impact claim. After building a prototype i
 
 These should inform website tone and content framing:
 
-1. **Specificity is the skill** — Vague prompts produce vague output. Real column names, real site names, real data distributions unlock quality.
+1. **Specificity is the skill** — Vague prompts produce vague output. Real column names, real branch names, real data distributions unlock quality.
 2. **Think in iterations, not shots** — First prompt = structure. Second = visual refinement. Third = interaction states. Don't try to perfect in one go.
 3. **Name the design language explicitly** — Without a reference (Salesforce, Jira, Linear, GOV.UK), AI defaults to generic consumer-app aesthetic.
-4. **Real data is a design tool** — Lorem Ipsum prevents useful stakeholder feedback. Realistic data (patient IDs, site names, actual counts) produces actionable review reactions.
+4. **Real data is a design tool** — Lorem Ipsum prevents useful stakeholder feedback. Realistic data (loan IDs, branch names, actual counts) produces actionable review reactions.
 5. **Failure is a diagnostic signal** — Bad output means the prompt lacked context, style direction, or scope discipline. Diagnose and refine; don't abandon.
 6. **Designer judgment is still the product** — AI generates options. The designer decides what's correct. This is a higher-order skill, not a lesser one.
 7. **Prototype to discover, not confirm** — Use fast prototyping to explore directions you'd otherwise never have time to try.
@@ -130,14 +130,14 @@ These should inform website tone and content framing:
 
 | Person | Role | Post-Workshop Commitment |
 |--------|------|--------------------------|
-| Ahmed | UX / Design Lead | 3 Claude Design use cases from current projects this week |
-| Kelly | Frontend Dev Lead | Cursor + Tailwind template for team use |
-| Brittany | Designer | AI requirements synthesis on next feasibility project |
-| Margaret | Designer | Cursor prototype for one sponsored portal feature before building in Figma |
-| Daniel | Clinical domain / UX | MCP server setup with Kelly — week 3 |
+| Alex | UX / Design Lead | 3 Claude Design use cases from current projects this week |
+| Jordan | Frontend Dev Lead | Cursor + Tailwind template for team use |
+| Sam | Designer | AI requirements synthesis on next feasibility project |
+| Taylor | Designer | Cursor prototype for one sponsored portal feature before building in Figma |
+| Chris | Financial domain / UX | MCP server setup with Jordan — week 3 |
 
 ### Week 3 Initiative: Figma MCP Integration
-Daniel and Kelly are scoped to set up the **Figma MCP** (Model Context Protocol) connection so Claude Code can read directly from Figma frames — bypassing Figma Make credit costs for documentation extraction.
+Chris and Jordan are scoped to set up the **Figma MCP** (Model Context Protocol) connection so Claude Code can read directly from Figma frames — bypassing Figma Make credit costs for documentation extraction.
 
 Setup:
 ```bash
@@ -188,7 +188,7 @@ These are the high-signal topics that emerge from the initiative context and sho
 - Extracting evolved specs from working prototypes
 - Acceptance criteria that emerge from building (not just speccing)
 - Connecting PRD → prototype → evolved spec in one workflow
-- Role-based handoff: what designers give to Kelly vs. what Claude Code generates directly
+- Role-based handoff: what designers give to Jordan vs. what Claude Code generates directly
 
 ### Tool Guides
 - Claude Design setup and first prompt guide
@@ -196,11 +196,11 @@ These are the high-signal topics that emerge from the initiative context and sho
 - Cursor + Claude Code for designers who aren't developers
 - Figma MCP integration walkthrough (week 3)
 
-### Regulated / Clinical Context
-- Designing for WCAG 2.1 AA in data-dense clinical applications
+### Regulated / Financial Context
+- Designing for WCAG 2.1 AA in data-dense financial applications
 - Color-blind-safe status indicators (icon + label, not color alone)
-- 21 CFR Part 11 implications for design decisions (audit logging, role gates)
-- What "de-identified" means for UI display vs. panel views
+- SOC 2 Type II and PCI-DSS implications for design decisions (audit logging, role gates)
+- What "anonymized" means for UI display vs. panel views
 
 ---
 
@@ -210,7 +210,7 @@ These are the high-signal topics that emerge from the initiative context and sho
 The team uses a **forked Angular Material UI** as their component library and design system. This is a critical constraint for any code generation, prototype-to-handoff workflows, and design system documentation on the website.
 
 Key implications for Claude Code when generating content or features:
-- Prototype output from Cursor (Tailwind/Shadcn) is **directionally useful but not directly shippable** — Kelly translates to Angular/Angular Material, not copy-pastes
+- Prototype output from Cursor (Tailwind/Shadcn) is **directionally useful but not directly shippable** — Jordan translates to Angular/Angular Material, not copy-pastes
 - Any code examples on the website that show "handoff-ready" code should acknowledge this translation step rather than implying zero friction
 - The design tokens (colors, spacing, typography) live in the Angular Material theme, not a Tailwind config — prompts should reference this when guiding users on design system integration
 
@@ -224,13 +224,13 @@ The team currently uses **Storybook** to host and develop components, but this i
 - Do not present Storybook as a settled part of the team's workflow — frame it as "currently used" with the caveat that alternatives are being evaluated
 - The "Claude Code generates Storybook stories" capability mentioned in the workshop is valuable *if* they stay on Storybook, but should be framed as contingent
 - Content covering the documentation loop (Workflow D / Prototype → Evolved Spec) should acknowledge that the component inventory output is tool-agnostic — useful whether they stay on Storybook, migrate to an alternative (e.g. Histoire, which has stronger Angular/Vite support), or build internal documentation tooling
-- When the Figma MCP integration (Section 6, week 3 — Daniel + Kelly) is covered, note that it produces component specs that are format-agnostic and not tied to Storybook
+- When the Figma MCP integration (Section 6, week 3 — Chris + Jordan) is covered, note that it produces component specs that are format-agnostic and not tied to Storybook
 
 ### How Claude Code and Cursor Close the Angular Material Gap
 
 This is an underexplored capability that should be surfaced explicitly in website content. The common assumption is that AI prototyping tools produce React/Tailwind output and Angular teams are left to translate manually. That's not accurate when Claude Code is in the loop.
 
-**Cursor alone:** Claude Code in Cursor can generate Angular Material components directly — not Tailwind stubs — when the prompt specifies the stack. A prompt like *"Build this enrollment table as an Angular 17 component using Angular Material `mat-table`, `mat-chip`, and `mat-menu`. Use the team's existing theme tokens for teal and navy."* produces Angular-idiomatic output Kelly can work with directly, not a React prototype she has to reverse-engineer.
+**Cursor alone:** Claude Code in Cursor can generate Angular Material components directly — not Tailwind stubs — when the prompt specifies the stack. A prompt like *"Build this loan application review table as an Angular 17 component using Angular Material `mat-table`, `mat-chip`, and `mat-menu`. Use the team's existing theme tokens for teal and navy."* produces Angular-idiomatic output Jordan can work with directly, not a React prototype she has to reverse-engineer.
 
 **Claude Code reading the existing codebase:** Because Claude Code can be pointed at the team's actual forked Angular Material source (via `@filename` or MCP), it can:
 - Infer the team's custom theme tokens and component overrides
@@ -239,34 +239,38 @@ This is an underexplored capability that should be surfaced explicitly in websit
 
 **Cursor + Claude Design in combination:** Claude Design generates the interactive prototype for exploration and stakeholder review (fast, shareable, no Angular knowledge required). Once a direction is approved, that prototype — plus the evolved spec extracted from it — becomes the brief fed into Cursor + Claude Code, which then generates the Angular Material implementation. The two tools operate in sequence: Claude Design owns the *what*, Cursor + Claude Code owns the *how in Angular*.
 
-**The practical workflow for Kelly:**
-1. Ahmed uses Claude Design to get stakeholder sign-off on a direction
+**The practical workflow for Jordan:**
+1. Alex uses Claude Design to get stakeholder sign-off on a direction
 2. Claude Code extracts the evolved spec from the prototype (component inventory, interaction specs, design decisions)
-3. Kelly opens Cursor, attaches the spec and the relevant section of the forked component library
+3. Jordan opens Cursor, attaches the spec and the relevant section of the forked component library
 4. Claude Code generates Angular Material components aligned to the fork — not generic Material, not Tailwind
-5. Kelly reviews, adjusts, and integrates — rather than translating from scratch
+5. Jordan reviews, adjusts, and integrates — rather than translating from scratch
 
-This reframes the prototyping tools from "useful for designers but creates Angular debt" to "a complete pipeline that terminates in Angular Material output." That framing is important for Kelly's buy-in and for website content aimed at development-side readers.
+This reframes the prototyping tools from "useful for designers but creates Angular debt" to "a complete pipeline that terminates in Angular Material output." That framing is important for Jordan's buy-in and for website content aimed at development-side readers.
 
 ### Implications for the "Prototype → Evolved Spec" Workflow
 The evolved spec output from Claude Code (component inventory, interaction specs, design decisions) is the most Storybook-independent artifact in the workflow. If the team moves away from Storybook, the spec document remains valuable as input to whatever component documentation system they adopt. Website content should position the *extraction workflow* as durable, and the *Storybook story generation* as one optional output of it.
 
 ---
 
-## 11. Reference Feature: Patient Enrollment Table
+## 11. Reference Feature: Loan Application Review Table
 
 When Claude Code needs a concrete example for any website content — tutorials, prompt examples, case studies — use this feature as the canonical reference:
 
-- **Trial:** ONCO-2024-003
-- **Sites:** Cedars-Sinai Medical Center LA, Mayo Clinic Rochester MN, Johns Hopkins Hospital Baltimore MD
-- **Patient count:** 12 patients
-- **Status distribution:** Screened ×2, Enrolled ×3–5, On Treatment ×3–5, Withdrawn ×1, Completed ×1
-- **Risk flags:** 1 Protocol Deviation (red), 2 At Risk (amber)
-- **Header:** Study code, 8/15 enrolled, 53% progress bar, four stat cards
-- **Filters:** Status dropdown, Site dropdown, "Show flagged only" toggle
-- **Actions per row:** View Record, Schedule Visit, Flag for Review (three-dot menu)
+- **Portfolio:** LOAN-2024-Q3
+- **Branches:** New York Branch Office, Chicago Branch Office, Los Angeles Branch Office
+- **Application count:** 12 applications
+- **Status distribution:** Under Review ×2, Approved ×3–5, In Underwriting ×3–5, Withdrawn ×1, Funded ×1
+- **Risk flags:** 1 Compliance Hold (red), 2 At Risk (amber)
+- **Header:** Portfolio code, 8/15 approved, 53% progress bar, four stat cards
+- **Filters:** Status dropdown, Branch dropdown, "Show flagged only" toggle
+- **Actions per row:** View Application, Schedule Review, Flag for Compliance (three-dot menu)
 - **Design style:** White background, teal (`#028090`) and navy (`#0D1B2A`) accents, high data density
+- **Roles:** Loan Officer, Credit Analyst, Risk Manager, Compliance Officer (read-only)
+- **Compliance:** SOC 2 Type II, PCI-DSS Level 1
+- **CRM integration:** Salesforce
+- **Data:** Anonymized customer data — no PII in table views
 
 ---
 
-*Last updated: April 2026. Source documents: Workshop_Facilitator_Runbook_v2.docx, PRD_Patient_Enrollment_Table.docx, vibe-coding-guide.html, cursor-demo-prompt.py*
+*Last updated: April 2026. Source documents: Workshop_Facilitator_Runbook_v2.docx, PRD_Loan_Application_Review_Table.docx, vibe-coding-guide.html, cursor-demo-prompt.py*
